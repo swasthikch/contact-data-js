@@ -80,13 +80,9 @@
             updateBtn.textContent = "Update";
             updateBtn.className = "btn btn-success";
             updateBtn.onclick = function () {
-                console.log(i);
-                // Fill the modal fields with selected contact data
                 document.getElementById("updateName").value = contactData[i].name;
                 document.getElementById("updatePhone").value = contactData[i].phone;
-                document.getElementById("updateIndex").value = i; // Save index
-
-                // Show Bootstrap Modal
+                document.getElementById("updateIndex").value = i; 
                 let updateModal = new bootstrap.Modal(document.getElementById('exampleModal'));
                 updateModal.show();
                 document.getElementById('updateSucMsg').style.display = "none";
